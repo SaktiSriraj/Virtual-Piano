@@ -1,0 +1,229 @@
+html {
+    height: 100%;
+    margin: 0;
+    font-family: arial;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000424;
+}
+
+strong {
+    position: relative;
+    font-weight: lighter;
+    font-family: Courier New;
+    top: 30px;
+    right: 3px;
+}
+
+.piano {
+    display: flex;
+    position: relative;
+    left: 5px;
+    margin-left: 4px;
+    border-left: 30px;
+    border-right: 30px;
+    border-radius: 5px;
+}
+
+.white-key {
+    width: 40px;
+    height: 150px;
+    background-color: white;
+    border: 4px solid black;
+    border-radius: 0 0 6px 6px;
+    margin-left: -4px;
+    outline: none;
+    cursor: pointer;
+}
+
+.white-key.active {
+    background-color: #c5bebe;
+}
+
+.black-key {
+    position: absolute;
+    width: 24px;
+    height: 100px;
+    background-image: linear-gradient(#000000, #303030);
+    border: 4px solid black;
+    border-radius: 0 0 3px 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+.black-key.active {
+    background-image: linear-gradient(#000000, #101010);
+}
+
+.Db4-key {
+    left: 22px;
+}
+
+.Eb4-key {
+    left: 58px;
+}
+
+.Gb4-key {
+    left: 130px;
+}
+
+.Ab4-key {
+    left: 166px;
+}
+
+.Bb4-key {
+    left: 202px;
+}
+
+.Db5-key {
+    left: 274px;
+}
+
+.Eb5-key {
+    left: 310px;
+}
+
+.Gb5-key {
+    left: 383px;
+}
+
+.Ab5-key {
+    left: 418px;
+}
+
+.Bb5-key {
+    left: 454px;
+}
+
+button.theme {
+    top: 100px;
+    left: -275px;
+    position: relative;
+    display: flex;
+    padding: 10px 15px;
+    color: antiquewhite;
+    border-radius: 10px;
+    background-color: #5027d8;
+    font-family: consolas;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+button.theme:hover {
+    color: violet;
+    background: #5027d8;
+    box-shadow: 0 0 10px #311a7a, 0 0 40px #311a7a, 0 0 80px #311a7a;
+    transition-delay: 1s;
+    border-radius: 10px;
+}
+
+button.theme span {
+    position: absolute;
+    display: block;
+}
+
+button.theme span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #00ff9d);
+}
+
+button.theme:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+
+button.theme span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #00ff9d);
+}
+
+button.theme:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+button.theme span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(270deg, transparent, #00ff9d);
+}
+
+button.theme:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+button.theme span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #00ff9d);
+}
+
+button.theme:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+h2 {
+    position: relative;
+    padding: none;
+    font-size: 5em;
+    letter-spacing: 7px;
+    color: #0e3742;
+    -webkit-box-reflect: below 1.5px linear-gradient(transparent, #000004);
+    line-height: 0.70em;
+    outline: none;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
+        color: #0e3742;
+        text-shadow: none;
+    }
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    65%,
+    80.1%,
+    90%,
+    92.1%,
+    100% {
+        color: #fff;
+        box-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4, 0 0 80px #03bcf4, 0 0 160px #03bcf4,
+    }
+}
